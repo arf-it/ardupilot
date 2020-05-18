@@ -71,8 +71,8 @@ bool AP_Frsky_Telem::init()
         // rate[i] = LinkRate * ( weight[i] / (sum(weight[1-n])) )
         _passthrough.packet_weight[0] = 35;   // 0x5000 status text (dynamic)
         _passthrough.packet_weight[1] = 50;   // 0x5006 Attitude and range (dynamic)
-        _passthrough.packet_weight[2] = 550;   // 0x800 GPS lat (600 with 1 sensor)
-        _passthrough.packet_weight[3] = 550;   // 0x800 GPS lon (600 with 1 sensor)
+        _passthrough.packet_weight[2] = 100;   // 0x800 GPS lat (600 with 1 sensor) orig: 550
+        _passthrough.packet_weight[3] = 100;   // 0x800 GPS lon (600 with 1 sensor) orig: 550
         _passthrough.packet_weight[4] = 400;   // 0x5005 Vel and Yaw
         _passthrough.packet_weight[5] = 700;   // 0x5001 AP status
         _passthrough.packet_weight[6] = 700;   // 0x5002 GPS Status

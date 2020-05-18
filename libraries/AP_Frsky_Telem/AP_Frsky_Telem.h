@@ -179,8 +179,8 @@ private:
         const uint32_t packet_min_period[TIME_SLOT_MAX] = {
             0,      //0x5000 text,      no rate limiter
             38,     //0x5006 attitude   20Hz
-            280,    //0x800  GPS        3Hz
-            280,    //0x800  GPS        3Hz
+            200,    //0x800  GPS        5Hz   orig:280 3Hz
+            200,    //0x800  GPS        5Hz   orig:280 3Hz
             250,    //0x5005 vel&yaw    4Hz
             500,    //0x5001 AP status  2Hz
             500,    //0x5002 GPS status 2Hz
